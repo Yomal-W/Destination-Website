@@ -1,0 +1,116 @@
+/*Color palet https://realtimecolors.com/?colors=f6f8f9-0e1315-493a32-080906-c7b6ad */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Martel', serif;
+color: #f6f8f9;
+}
+
+#header {
+    background-color: #0e1315;
+}
+
+.container {
+    padding: 50px 5%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul button{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: #493a32;
+}
+
+nav ul button:hover {
+    background-color: #c7b6ad;
+}
+
+nav ul button:hover li {
+    color: #0e1315;
+}
+
+nav .logo {
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #c7b6ad;
+    font-size: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Proza Libre', sans-serif;
+}
+
+
+/*Tourist destinations Pages*/
+
+.location {
+    margin-bottom: 35px;
+}
+
+.location h2{
+    color: #c7b6ad;
+    font-size: 40px;
+    font-family: 'Proza Libre', sans-serif;
+}
+
+#coloseum, #pantheon {
+    background: black;
+}
+
+#coloseum .cols, #pantheon .cols {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#coloseum .col-1, #pantheon .col-2 { /*Image columns*/
+    flex-basis: 40%;
+}
+
+.col-1 .fig-coloseum img, .col-2 .fig-pantheon img {
+    width: 100%;
+    border-radius: 40px;
+}
+
+/*Image caption and link*/
+.fig-coloseum figcaption, .fig-pantheon figcaption {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.captionlink, .captionlink:link, .captionlink:visited, .captionlink:active {
+    text-decoration: none;
+    color: #f6f8f9;
+}
+
+.captionlink:hover {
+    color: #c7b6ad;
+}
+
+#coloseum .col-2, #pantheon .col-1 {
+    flex-basis: 55%
+}
+
+#coloseum .col-2 h3, #pantheon .col-1 h3 {
+    padding-bottom: 25px;
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 25px;
+}
+
+
+/*Pantheon*/
+
+
+
+
