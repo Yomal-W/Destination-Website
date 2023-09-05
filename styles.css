@@ -55,13 +55,14 @@ nav ul li a {
 /*Tourist destinations Pages*/
 
 .location {
-    margin-bottom: 35px;
+    margin-bottom: 50px;
 }
 
 .location h2{
     color: #c7b6ad;
     font-size: 35px;
     font-family: 'Proza Libre', sans-serif;
+    text-align: center;
 }
 
 #coloseum, #pantheon {
