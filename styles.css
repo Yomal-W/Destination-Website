@@ -1,11 +1,12 @@
 /*Color palet used https://realtimecolors.com/?colors=f6f8f9-0e1315-493a32-080906-c7b6ad */
-/*I used https://fontjoy.com to find an optimal font selection*/
+
+/*I used https://fontjoy.com to find an optimal font selection */
 
 * {
     margin: 0;
     padding: 0;
     font-family: 'Martel', serif;
-color: #f6f8f9;
+    color: #f6f8f9;
 }
 
 #header { /*Navigation Bar*/
