@@ -1,4 +1,5 @@
-/*Color palet https://realtimecolors.com/?colors=f6f8f9-0e1315-493a32-080906-c7b6ad */
+/*Color palet used https://realtimecolors.com/?colors=f6f8f9-0e1315-493a32-080906-c7b6ad */
+/*I used https://fontjoy.com to find an optimal font selection*/
 
 * {
     margin: 0;
@@ -7,15 +8,15 @@
 color: #f6f8f9;
 }
 
-#header {
+#header { /*Navigation Bar*/
     background-color: #0e1315;
 }
 
-.container {
+.container { /*Container to put all sub parts og my website in for consistent spacing*/
     padding: 50px 5%;
 }
 
-nav {
+nav { 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +41,7 @@ nav ul button:hover li {
     color: #0e1315;
 }
 
-nav .logo {
+nav .current-tab-title {
     font-family: 'Merriweather Sans', sans-serif;
     color: #c7b6ad;
     font-size: 50px;
@@ -52,62 +53,68 @@ nav ul li a {
 }
 
 
-/*Tourist destinations Pages*/
 
-.location {
+
+/*******Tourist Destinations Page*******/
+
+
+
+
+#coloseum, #pantheon {
+    background: black;
+}
+
+.location-name {
     margin-bottom: 50px;
 }
 
-.location h2{
+.location-name h2{
     color: #c7b6ad;
     font-size: 35px;
     font-family: 'Proza Libre', sans-serif;
     text-align: center;
 }
 
-#coloseum, #pantheon {
-    background: black;
-}
-
-#coloseum .cols, #pantheon .cols {
+.dest-cols { /*dest-cols = Destination Columns*/
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-#coloseum .col-1, #pantheon .col-2 { /*Image columns*/
-    flex-basis: 40%;
-}
-
-.col-1 .fig-coloseum img, .col-2 .fig-pantheon img {
-    width: 100%;
-    border-radius: 40px;
-}
-
-/*Image caption and link*/
-.fig-coloseum figcaption, .fig-pantheon figcaption {
-    text-align: center;
-    padding-top: 10px;
-}
-
-.captionlink, .captionlink:link, .captionlink:visited, .captionlink:active {
-    text-decoration: none;
-    color: #f6f8f9;
-}
-
-.captionlink:hover {
-    color: #c7b6ad;
-}
-
-#coloseum .col-2, #pantheon .col-1 {
-    flex-basis: 55%
-}
-
-#coloseum .col-2 h3, #pantheon .col-1 h3 {
+.dest-desc h3 {
     padding-bottom: 25px;
     font-family: 'Proza Libre', sans-serif;
     font-size: 25px;
 }
+
+.dest-desc { /*.dest-desc = Destination Description*/
+    flex-basis: 55%
+}
+
+.dest-img { /*.dest-img = Destination Images*/
+    flex-basis: 40%; 
+}
+
+.fig-destination img { /*.fig-destination = Figure element to hold destination image and caption*/
+    width: 100%;
+    border-radius: 40px;
+}
+
+.fig-destination figcaption {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.caption-link, .caption-link:link, .caption-link:visited, .caption-link:active {
+    text-decoration: none;
+    color: #f6f8f9;
+}
+
+.caption-link:hover {
+    color: #c7b6ad;
+}
+
+
 
 
 
