@@ -2,6 +2,8 @@
 
 /*I used https://fontjoy.com to find an optimal font selection */
 
+/*I used https://webaim.org/resources/contrastchecker/ and https://color.review/ to have an optimal colour contrast ratio for accessibility purposes*/
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +15,7 @@
     background-color: #0e1315;
 }
 
-.container { /*Container to put all sub parts og my website in for consistent spacing*/
+.container { /*Container to put all sub parts of my website in for consistent spacing*/
     padding: 50px 5%;
 }
 
