@@ -64,7 +64,7 @@ nav ul li a {
 
 
 
-/*******Tourist Destinations Page*******/
+/*******Cultural Discovery Page*******/
 
 
 
@@ -73,53 +73,53 @@ nav ul li a {
     background: black;
 }
 
-.location-name {
+.location-name { /*Margin used to keep spacing between the sub heading and the content(image and descriptions below it) below it*/
     margin-bottom: 50px;
 }
 
-.location-name h2{
+.location-name h2{ /*Styling to keep sub heading in center of page*/
     color: #c7b6ad;
     font-size: 35px;
     font-family: 'Proza Libre', sans-serif;
     text-align: center;
 }
 
-.dest-cols { /*dest-cols = Destination Columns*/
+.dest-cols { /*dest-cols = Destination Columns*/ /*Allowing for the content within the element to be side by side. In this case the image and its description.*/
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.dest-desc h3 {
+.dest-desc h3 { /*Padding used to create space between destination title and its description*/
     padding-bottom: 25px;
     font-family: 'Proza Libre', sans-serif;
     font-size: 25px;
 }
 
-.dest-desc { /*.dest-desc = Destination Description*/
+.dest-desc { /*.dest-desc = Destination Description*/ /*Desitination description width in the container*/
     flex-basis: 55%
 }
 
-.dest-img { /*.dest-img = Destination Images*/
+.dest-img { /*.dest-img = Destination Images*/ /*Desitination image width in the container*/
     flex-basis: 40%; 
 }
 
-.fig-destination img { /*.fig-destination = Figure element to hold destination image and caption*/
+.fig-destination img { /*.fig-destination = Figure element to hold destination image and caption*/ /*Modern look to the images to give them character with border-radius used*/
     width: 100%;
     border-radius: 40px;
 }
 
-.fig-destination figcaption {
+.fig-destination figcaption { /*The caption will be centered within the figure elemtns with some spacing between the image and text*/
     text-align: center;
     padding-top: 10px;
 }
 
-.caption-link, .caption-link:link, .caption-link:visited, .caption-link:active {
+.caption-link, .caption-link:link, .caption-link:visited, .caption-link:active { /*For a clean and minimilistic look, all link statuses will be the same colour*/
     text-decoration: none;
     color: #f6f8f9;
 }
 
-.caption-link:hover {
+.caption-link:hover { /*When hovering over the captions for the images, the colour will change*/  
     color: #c7b6ad;
 }
 
