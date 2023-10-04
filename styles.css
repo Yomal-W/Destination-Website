@@ -20,16 +20,16 @@
 }
 
 nav { 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    display: flex; /*Flex container is now made*/ /*By default felx-direction: row;*/
+    justify-content: space-between; /*Flex property*/
+    align-items: center; /*Flex property*/ 
+    flex-flow: row wrap; /*flex-wrap and flex-direction can be cominded into one flex property called flex-flow*/ /*I only need to be writting flex-wrap; wrap; here but I want to confirm the default flex-direction of row*/
 }
 
 nav ul button{
     display: inline-block;
     list-style: none;
-    margin: 10px 25px;
+    margin: 0px 25px;
     padding: 15px;
     border: none;
     border-radius: 30px;
@@ -39,6 +39,7 @@ nav ul button{
 
 nav ul button:hover {
     background-color: #c7b6ad;
+    opacity: 1;
     transition: 1s;
 }
 
@@ -87,7 +88,7 @@ nav ul li a {
 .dest-cols { /*dest-cols = Destination Columns*/ /*Allowing for the content within the element to be side by side. In this case the image and its description.*/
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
 
 .dest-desc h3 { /*Padding used to create space between destination title and its description*/
