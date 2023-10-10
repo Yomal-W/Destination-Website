@@ -49,9 +49,9 @@ nav .current-tab-title {
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 42px;
     background: linear-gradient(-90deg, #c7b6ad, #493a32);
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; /*two propoerties needed so the gradient isn't applied behind the text but actually within the text its self*/
     background-clip: text;
-    color: transparent;
+    color: transparent; /*Text colour made transparent so gradient can be seen*/
 }
 
 nav ul li a {
