@@ -1,4 +1,4 @@
-/*Color palet used https://realtimecolors.com/?colors=f6f8f9-0e1315-493a32-080906-c7b6ad */
+/*Color palet used https://www.realtimecolors.com/?colors=f6f8f9-000000-493a32-0E1315-c7b6ad&fonts=Poppins-Poppins */
 
 /*I used https://fontjoy.com to find an optimal font selection */
 
@@ -34,12 +34,10 @@ nav ul button{
     border: none;
     border-radius: 30px;
     background-color: #493a32;
-    opacity: 0.7;
 }
 
 nav ul button:hover {
     background-color: #c7b6ad;
-    opacity: 1;
     transition: 1s;
 }
 
@@ -49,8 +47,11 @@ nav ul button:hover li {
 
 nav .current-tab-title {
     font-family: 'Merriweather Sans', sans-serif;
-    color: #c7b6ad;
     font-size: 42px;
+    background: linear-gradient(-90deg, #c7b6ad, #493a32);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 nav ul li a {
@@ -59,7 +60,11 @@ nav ul li a {
 }
 
 .active-tab {
-    opacity: 1;
+    background-color: #c7b6ad;
+}
+
+.active-tab li {
+    color: #0e1315;
 }
 
 
@@ -71,7 +76,7 @@ nav ul li a {
 
 
 #coloseum, #pantheon {
-    background: black;
+    background: #080906;
 }
 
 .location-name { /*Margin used to keep spacing between the sub heading and the content(image and descriptions below it) below it*/
