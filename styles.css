@@ -33,15 +33,23 @@ nav ul button{
     padding: 15px;
     border: none;
     border-radius: 30px;
+    will-change: background-color; /*Hardweare acceleration*/
+    transition: background-color 450ms ease;
     background-color: #493a32;
 }
 
 nav ul button:hover {
+    transition: background-color 250ms ease;
     background-color: #c7b6ad;
-    transition: 1s;
 }
 
-nav ul button:hover li {
+nav ul button li { /*Button text colour cursor exit transition*/
+    will-change: color;
+    transition: color 450ms ease;
+}
+
+nav ul button:hover li { /*Button text colour cursor hover transition*/
+    transition: color 250ms ease;
     color: #0e1315;
 }
 
@@ -54,7 +62,7 @@ nav .current-tab-title {
     color: transparent; /*Text colour made transparent so gradient can be seen*/
 }
 
-nav ul li a {
+nav ul li {
     text-decoration: none;
     font-family: 'Proza Libre', sans-serif;
 }
@@ -70,11 +78,65 @@ nav ul li a {
 
 
 
+/*******Home page*******/
+#home-page {
+    background: #080906
+}
+
+.home-cols {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-col-1 {
+    flex-basis: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.home-col-2 {
+    flex-basis: 55%;
+}
+
+.home-col-2 img {
+    width: 100%;
+    border-radius: 40px;
+}
+
+.home-col-1-content h2, p {
+    margin-bottom: 20px;
+}
+
+.home-col-1-content h2, i {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 50px;
+}
+
+.home-col-1-content h2 i {
+    color: #c7b6ad;
+}
+
+.home-col-1-content button {
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 17px 11px;
+    will-change: background-color; /*Hardweare acceleration*/
+    transition: background-color 450ms ease, color 450ms ease;
+    background-color: #493a32;
+}
+
+.home-col-1-content button:hover {
+    transition: background-color 250ms ease, color 250ms ease;
+    background-color: #c7b6ad;
+    color: #0e1315;
+}
+
+
+
+
 /*******Cultural Discovery Page*******/
-
-
-
-
 #coloseum, #pantheon {
     background: #080906;
 }
@@ -108,6 +170,16 @@ nav ul li a {
 
 .dest-img { /*.dest-img = Destination Images*/ /*Desitination image width in the container*/
     flex-basis: 40%; 
+}
+
+.fig-destination {
+    will-change: transform; /*Hardware acceleration*/
+    transition: transform 0.4s ease;
+}
+
+.fig-destination:hover {
+    transition: transform 0.2s ease;
+    transform: scale(1.05);
 }
 
 .fig-destination img { /*.fig-destination = Figure element to hold destination image and caption*/ /*Modern look to the images to give them character with border-radius used*/
