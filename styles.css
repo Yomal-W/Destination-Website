@@ -96,6 +96,13 @@ nav ul li {
 
 .home-col-2 {
     flex-basis: 55%;
+    will-change: transform; /*Hardware acceleration*/
+    transition: transform 0.4s ease;
+}
+
+.home-col-2:hover {
+    transition: transform 0.2s ease;
+    transform: scale(1.05);
 }
 
 .home-col-2 img {
