@@ -143,6 +143,22 @@ nav ul li {
 
 
 
+/*******Geographical Wonders Page*******/
+#interactive-map {
+    background: #080906;
+}
+
+.rome-map-image {
+    display: flex;
+    justify-content: center;
+}
+
+.rome-map-image img {
+    width: 60%;
+    border-radius: 40px;
+}
+
+
 /*******Cultural Discovery Page*******/
 #coloseum, #pantheon {
     background: #080906;
