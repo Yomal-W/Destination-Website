@@ -86,6 +86,7 @@ nav ul li {
 .home-cols {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .home-col-1 {
@@ -130,7 +131,7 @@ nav ul li {
     border-radius: 10px;
     padding: 17px 11px;
     will-change: background-color; /*Hardweare acceleration*/
-    transition: background-color 450ms ease, color 450ms ease;
+    transition: background-color 450ms ease, color 450ms ease; /*Don't need to state colour here because everytthing is white by default at the top with (*)*/
     background-color: #493a32;
 }
 
@@ -148,6 +149,26 @@ nav ul li {
     background: #080906;
 }
 
+.map-instructions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.map-instructions p {
+    flex-basis: 50%;
+    background-color: #493a32;
+    padding: 30px;
+    border-radius: 17px;
+    font-family: 'Proza Libre', sans-serif;
+}
+
+.map-instructions img {
+    width: 40%;
+}
+
 .rome-map-image {
     display: flex;
     justify-content: center;
@@ -157,6 +178,8 @@ nav ul li {
     width: 60%;
     border-radius: 40px;
 }
+
+
 
 
 /*******Cultural Discovery Page*******/
@@ -227,7 +250,28 @@ nav ul li {
 
 
 
+@media (max-width: 768px) {
+    /*Home page*/
+    .home-cols {
+        flex-direction: column; /*Items can now be stacked vertically*/
+        align-items: center;
+    }
 
+    .home-col-2 {
+        margin-top: 50px;
+    }
+    
+    /*Geogrpahical Wonders page*/
+    .map-instructions {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .map-instructions img {
+        width: 100%; /*Make image take the full width of the phone screen as it is a smaller device*/
+    }
 
-
+    .rome-map-image img {
+        width: 100%;
+    }
+}
