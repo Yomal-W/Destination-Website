@@ -23,7 +23,7 @@ nav {
     display: flex; /*Flex container is now made*/ /*By default felx-direction: row;*/
     justify-content: space-between; /*Flex property*/
     align-items: center; /*Flex property*/ 
-    flex-flow: row wrap; /*flex-wrap and flex-direction can be cominded into one flex property called flex-flow*/ /*I only need to be writting flex-wrap; wrap; here but I want to confirm the default flex-direction of row*/
+    flex-flow: row wrap; /*flex-wrap and flex-direction can be combinded into one flex property called flex-flow*/ /*I only need to be writting flex-wrap; wrap; here but I want to confirm the default flex-direction of row*/
 }
 
 nav ul button{
@@ -81,6 +81,10 @@ nav ul li {
 /*******Home page*******/
 #home-page {
     background: #080906;
+}
+
+.container-home {
+    padding: 85px 5%;
 }
 
 .home-cols {
@@ -160,8 +164,8 @@ nav ul li {
 .map-instructions p {
     flex-basis: 50%;
     background-color: #493a32;
-    padding: 30px;
-    border-radius: 17px;
+    padding: 40px;
+    border-radius: 40px;
     font-family: 'Proza Libre', sans-serif;
 }
 
@@ -250,7 +254,46 @@ nav ul li {
 
 
 
+/*Attractions and Events page*/
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; /* Adjust the margin as needed */
+}
+
+.grid-item {
+    position: relative;
+    width: calc(25% - 30px);
+    height: 0;
+    padding-bottom: calc(25% - 30px);
+    background-color: #3498db; /* Set your desired background color */
+    overflow: hidden; /* Ensure the image stays within the grid item */
+}
+
+.grid-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+
+
+
+
+
+
 @media (max-width: 768px) {
+    .container, .container-home {
+        padding: 50px 10%;
+    }
+
+    nav ul button {
+        margin-top: 20px;
+    }
+
     /*Home page*/
     .home-cols {
         flex-direction: column; /*Items can now be stacked vertically*/
@@ -267,11 +310,18 @@ nav ul li {
         align-items: center;
     }
 
-    .map-instructions img {
+    .map-instructions img, .rome-map-image img {
         width: 100%; /*Make image take the full width of the phone screen as it is a smaller device*/
     }
 
-    .rome-map-image img {
-        width: 100%;
+    /*Cultural discovery page*/
+    .dest-cols {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dest-img {
+        order: -1;
+        margin-bottom: 27px;
     }
 }
