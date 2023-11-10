@@ -21,7 +21,7 @@
 
 nav { 
     display: flex; /*Flex container is now made*/ /*By default felx-direction: row;*/
-    justify-content: space-between; /*Flex property*/
+    justify-content: space-between; /*Flex property for spacing on horizontal axiz between the name of the wesite and the navigation buttons*/
     align-items: center; /*Flex property*/ 
     flex-flow: row wrap; /*flex-wrap and flex-direction can be combinded into one flex property called flex-flow*/ /*I only need to be writting flex-wrap; wrap; here but I want to confirm the default flex-direction of row*/
 }
@@ -83,66 +83,68 @@ nav ul li {
     background: #080906;
 }
 
-.container-home {
+.container-home { /*Only for the home page I have made an exclusive container. Normally it is (.container). However when i use this container the content of the home page does not cover the screen from top to bottom on your normal 1920x1080p resolution. I wanted it to perfectly cover the screen. Hence I created a exclusive container (.container-home) with differnt padding on the top and bottom*/
     padding: 85px 5%;
 }
 
 .home-cols {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: flex; /*I have created a flexbox*/
+    justify-content: space-between; /*Allows space between the title, text description, button on the left to the container on the right for the image*/
+    flex-wrap: wrap; /*Responsivness so the image can wrap under first column on a smaller screen*/
 }
 
 .home-col-1 {
-    flex-basis: 40%;
-    display: flex;
-    align-items: center;
+    flex-basis: 40%; /*I can control how much the left column takes in the flex box*/
+    display: flex; /*Another flexbox is created*/
+    align-items: center; /*Now the content can be aligned vertically*/
 }
 
 .home-col-2 {
-    flex-basis: 55%;
-    will-change: transform; /*Hardware acceleration*/
-    transition: transform 0.4s ease;
+    flex-basis: 55%; /*I wanted the image to take up a larger prportion of the flexbox container*/
+    will-change: transform; /*Hardware acceleration for transition*/
+    transition: transform 0.4s ease; /*Slow exit transition. I don't need to write transform again here as the scale is 1 by default*/
+    display: flex; /*Flexbox created*/
+    align-items: center; /*Making sure image is centered vertically*/
 }
 
 .home-col-2:hover {
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease; /*Fast hover transition to to to scale larger. I have called upon transform which I typed below. I found ease transition curve to be the smoothest and easiest on the eyes*/
     transform: scale(1.05);
 }
 
 .home-col-2 img {
     width: 100%;
-    border-radius: 40px;
+    border-radius: 40px; /*Throughout the website I have used rounded edges on the images as it has a minimilistic feal*/
 }
 
 .home-col-1-content h2, p {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*Crreated spacing at the bottom of the heading/title and paragraph to create spacing between the 3 elements (Heading/title, paragraph and button)*/
 }
 
 .home-col-1-content h2, i {
     font-family: 'Merriweather Sans', sans-serif;
-    font-size: 50px;
+    font-size: 50px;  /*Large size to catch attention*/
 }
 
 .home-col-1-content h2 i {
-    color: #c7b6ad;
+    color: #c7b6ad; /*Acccent colour on words 'Rome' which is in italics*/
 }
 
 .home-col-1-content button {
     font-family: 'Proza Libre', sans-serif;
     font-size: 15px;
-    border: none;
-    border-radius: 10px;
-    padding: 17px 11px;
-    will-change: background-color; /*Hardweare acceleration*/
-    transition: background-color 450ms ease, color 450ms ease; /*Don't need to state colour here because everytthing is white by default at the top with (*)*/
+    border: none; /*I don't want a border on the button which is there by default*/
+    border-radius: 10px; /*Again following theme of rounded edges*/
+    padding: 17px 11px; /*Breathing room for the text 'START HERE' in the centre of the button*/
+    will-change: background-color; /*Hardweare acceleration for transtion to lighter colour*/
+    transition: background-color 450ms ease, color 450ms ease; /*Both the baackground colour of the button and the text colour anre being declared in the transition. Don't need to state colour here because everytthing is white by default at the top with (*)*/
     background-color: #493a32;
 }
 
 .home-col-1-content button:hover {
-    transition: background-color 250ms ease, color 250ms ease;
-    background-color: #c7b6ad;
-    color: #0e1315;
+    transition: background-color 250ms ease, color 250ms ease; /*Fast hover transition and slower exit transition*/
+    background-color: #c7b6ad; /*Needs to be declared here with the value so it can be calld uppon in transition: background-color;*/
+    color: #0e1315; /*Needs to be declared here with the value so it can be calld uppon in transition: color; for text*/
 }
 
 
@@ -154,33 +156,33 @@ nav ul li {
 }
 
 .map-instructions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
+    display: flex; /*Creates a flex container so I can seprate the instuctions from the image of the 3 roman figures*/
+    justify-content: space-between; /*As the flex-direction is row by default I have used justify-content for spacing on the x-axis between the instructions and the image of the 3 roman figures*/
+    align-items: center; /*Controls the ext and puts it in the center on the y-axis*/
+    margin-bottom: 50px;/*I have created spacing on the bottom of the instructions container so there is some there is more space for the interactive map to breath below*/
+    flex-wrap: wrap; /*THis is important for responsivness. Now the image of the 3 figures can wrap under the text instructions*/
 }
 
 .map-instructions p {
-    flex-basis: 50%;
-    background-color: #493a32;
-    padding: 40px;
-    border-radius: 40px;
+    flex-basis: 50%; /*I can control the felx-box item and how much space the paragraph will take*/
+    background-color: #493a32; /*Good contrast for the white coloured text*/
+    padding: 40px; /*Minimilistic feal and alows breathing space for the text*/
+    border-radius: 40px; /*To match the border rounding theme throughout all pages*/
     font-family: 'Proza Libre', sans-serif;
 }
 
 .map-instructions img {
-    width: 40%;
+    width: 40%; /*Control how big the image of the three rome figures is relative to its original size(100%)*/
 }
 
 .rome-map-image {
     display: flex;
-    justify-content: center;
+    justify-content: center; /*Making sure the map is always in the center now matter its width*/
 }
 
 .rome-map-image img {
-    width: 60%;
-    border-radius: 40px;
+    width: 100%; /**Declaring that the map's width is always 100%*/
+    border-radius: 40px; /*Again a border radius to go with the theme*/
 }
 
 
@@ -191,11 +193,11 @@ nav ul li {
     background: #080906;
 }
 
-.location-name { /*Margin used to keep spacing between the sub heading and the content(image and descriptions below it) below it*/
+.sub-head { /*Margin used to keep spacing between the sub heading and the content(image and descriptions below it) below it*/
     margin-bottom: 50px;
 }
 
-.location-name h2{ /*Styling to keep sub heading in center of page*/
+.sub-head h2{ /*Styling to keep sub heading in center of page*/
     color: #c7b6ad;
     font-size: 35px;
     font-family: 'Proza Libre', sans-serif;
@@ -224,11 +226,11 @@ nav ul li {
 
 .fig-destination {
     will-change: transform; /*Hardware acceleration*/
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease; /*Slow transtion back to original size when leaving hover*/
 }
 
 .fig-destination:hover {
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease; /*Fast transition when hover. This is a more intuitive design wise - fast transition when hovering and slow exit transition*/
     transform: scale(1.05);
 }
 
@@ -238,12 +240,12 @@ nav ul li {
 }
 
 .fig-destination figcaption { /*The caption will be centered within the figure elemtns with some spacing between the image and text*/
-    text-align: center;
-    padding-top: 10px;
+    text-align: center; /*Keeping the picture caption centered relative it its fig-destination container*/
+    padding-top: 10px; /*Spacing between the caption and the image for cleaner look*/
 }
 
 .caption-link, .caption-link:link, .caption-link:visited, .caption-link:active { /*For a clean and minimilistic look, all link statuses will be the same colour*/
-    text-decoration: none;
+    text-decoration: none; /*Thi gets rid of the underline which is there by default on links*/
     color: #f6f8f9;
 }
 
@@ -260,29 +262,28 @@ nav ul li {
 }
 
 .grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px; 
+    display: flex; /*I have declared a flexbox*/
+    flex-wrap: wrap; /*Allows my items to wrap to the next line*/
+    gap: 30px; /*For minimilistic feal and breathing room there is spacing added*/
+    justify-content: center; /*I have centered the items horizontally on the x-axis*/
+    align-items: center; /*Also the y-axis has centering vertically*/
 }
 
 .grid-item {
-    position: relative;
-    overflow: hidden; 
+    position: relative; /*I have done this so the children elemnt img can have absolute positioning*/
+    overflow: hidden;  /*This makes sure no content bleeds out and so that it is hidden*/
 }
 
 .grid-item img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 30px;
+    position: absolute; /*Absolute so the full width and height can be declared for grid-item*/
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /*Makes sure the entire container is covered*/
+    border-radius: 30px; /*Once again rounded corners for the images to keep theme consistent*/
 }
 
-.grid-item:nth-child(1) {
-    width: calc(50% - 15px);
+.grid-item:nth-child(1) { /*Selector to select the number of grid-item relative to the parent grid-container*/
+    width: calc(50% - 15px); /*Width and height control. I have messed around to create a abstract grid*/
     height: 230px;
 }
 
@@ -321,73 +322,63 @@ nav ul li {
     height: 220px;
 }
 
-/*Code for text*/
 .grid-item::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
+    content: ''; /*Creates text-overlay with no content yet. Whenever I used ::after or ::before I must have (content: ;)*/
+    position: absolute; /*Absolute postioning for the overlay*/
+    width: 100%; 
+    height: 100%; 
+    opacity: 0; /*Set to transparent iniitially as I want it to become opacity 1 on hover*/
 }
 
 .grid-item:hover::after {
-    content: attr(rome-image-name);
-    position: absolute;
-    text-align: center;
-    font-family: 'Proza Libre', sans-serif;
-    font-size: 25px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 30px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.2s ease;
-    opacity: 1;
+    content: attr(rome-image-name); /*The attr allows me to set content to rome-image-name. I can call upon this in the html file and inpput the text i want to be desplayed*/
+    position: absolute; /*Again absolute positioning still*/
+    text-align: center; /*Text is alligned in the center horizontally*/
+    font-family: 'Proza Libre', sans-serif; 
+    font-size: 25px; /*Accessbility is considered so the text is mae big to make it easy to read*/
+    background-color: rgba(0, 0, 0, 0.7); /*Almost fully transparent black background code. This allows the text to be seen well as there is a good contrast*/
+    border-radius: 30px; /*Rounded corners to follow theme*/
+    width: 100%; /*Making sure this overlay takes full width over the image in the container*/
+    height: 100%; /*Making sure this overlay takes full eight over the image in the container*/
+    display: flex; /*Felx box declared to center text vertically */
+    flex-direction: column; /*Allows to be stacked vertically*/
+    justify-content: center; /*Allows text to be centered vertically*/
+    align-items: center; /*Allows text to be centered horizontally*/
+    transition: opacity 0.2s ease; /*Smooth transition on hover*/ /*My exit transition wasn't working so I removed it. Couldn't solve problem*/
+    opacity: 1; /*This makes it so you can fully see the overlay on hover*/
 }
 
 
 
 
-
-@media (max-width: 768px) {
-    .container, .container-home {
-        padding: 50px 10%;
+@media (max-width: 768px) { /*Respnnsivness for smaller screens*/
+    .container, .container-home { /*Equal badding for the container on each page*/
+        padding: 50px 10%; /*Percentage used on sides for relativity*/
     }
 
     nav ul button {
         margin-top: 20px;
     }
 
-    /*Home page*/
-    .home-cols {
+    .home-cols, .map-instructions, .dest-cols {
         flex-direction: column; /*Items can now be stacked vertically*/
-        align-items: center;
+        align-items: center; /*Keeps items centered horizontally, not vertically as now the felx-direction is column, not the default row*/
     }
 
+
+    /*Home page*/
     .home-col-2 {
-        margin-top: 50px;
+        margin-top: 50px; /*Some spacing below the home-col-1 with the text. This is because the image wraps unders the text on a smaller screen*/
     }
     
-    /*Geogrpahical Wonders page*/
-    .map-instructions {
-        flex-direction: column;
-        align-items: center;
-    }
-
+    /*Geographical Wonders page*/
     .map-instructions img, .rome-map-image img {
         width: 100%; /*Make image take the full width of the phone screen as it is a smaller device*/
     }
 
-    /*Cultural discovery page*/
-    .dest-cols {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .dest-img {
+    /*Cultural discovery, Geographical Wonders, Community Significance page*/
+    .dest-img { /*For a more intuitive design on smaller screens I have made it so that dest-img is above dest-desc. On bigger screens the second destination dest-img is after the dest-desc. Hence it order is second relative to its parent .dest-cols . To make it so that it comes before the description on smaller screens I am am using order: -1; to move it to first */
         order: -1;
         margin-bottom: 27px;
     }
