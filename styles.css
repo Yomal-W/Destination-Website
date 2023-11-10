@@ -255,31 +255,98 @@ nav ul li {
 
 
 /*Attractions and Events page*/
+#rome-grid-images {
+    background-color: #080906;
+}
+
 .grid-container {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
     align-items: center;
-    margin-top: 30px; /* Adjust the margin as needed */
+    margin-top: 30px; 
 }
 
 .grid-item {
     position: relative;
-    width: calc(25% - 30px);
-    height: 0;
-    padding-bottom: calc(25% - 30px);
-    background-color: #3498db; /* Set your desired background color */
-    overflow: hidden; /* Ensure the image stays within the grid item */
+    overflow: hidden; 
 }
 
 .grid-item img {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    object-fit: cover;
+    border-radius: 30px;
 }
 
+.grid-item:nth-child(1) {
+    width: calc(50% - 15px);
+    height: 230px;
+}
+
+.grid-item:nth-child(2) {
+    width: calc(25% - 15px);
+    height: 300px;
+}
+
+.grid-item:nth-child(3) {
+    width: calc(25% - 15px);
+    height: 250px;
+}
+
+.grid-item:nth-child(4) {
+    width: calc(75% - 15px);
+    height: 350px;
+}
+
+.grid-item:nth-child(5) {
+    width: calc(35% - 15px);
+    height: 400px;
+}
+
+.grid-item:nth-child(6) {
+    width: calc(50% - 15px);
+    height: 280px;
+}
+
+.grid-item:nth-child(7) {
+    width: calc(25% - 15px);
+    height: 320px;
+}
+
+.grid-item:nth-child(8) {
+    width: calc(50% - 15px);
+    height: 220px;
+}
+
+/*Code for text*/
+.grid-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.grid-item:hover::after {
+    content: attr(rome-image-name);
+    position: absolute;
+    text-align: center;
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s ease;
+    opacity: 1;
+}
 
 
 
