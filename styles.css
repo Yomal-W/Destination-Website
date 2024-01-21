@@ -84,7 +84,7 @@ nav ul li {
 }
 
 .container-home { /*Only for the home page I have made an exclusive container. Normally it is (.container). However when i use this container the content of the home page does not cover the screen from top to bottom on your normal 1920x1080p resolution. I wanted it to perfectly cover the screen. Hence I created a exclusive container (.container-home) with differnt padding on the top and bottom*/
-    padding: 85px 5%;
+    padding: 100px 5%;
 }
 
 .home-cols {
